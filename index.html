@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+<!-- 
+============================================================================
+HEAD
+============================================================================
+-->
+
+<head>
+
+    <!-- Include metadata about HTML document -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+
+    <!-- Site name -->
+    <title> GetCodingProjectProposal </title>
+
+    <!-- Link css -->
+    <link rel="stylesheet" href="css/rocks.css">
+
+    <!-- Link JS -->
+    <script src="js/rocks.js" type="text/javascript" defer> </script>
+
+</head>
+
+<!-- 
+============================================================================
+NAVIGATION
+============================================================================
+-->
+
+<body class="chrisRocks">
+
+    <!-- Custom cursor for page -->
+    <div id="cursorTrace">
+        <div id="innerCircle"></div>
+        <h2 id="cursorText"> </h2>
+    </div>
+
+    <!-- Navigation Tab -->
+    <nav>
+        <h1> Rock <em> Types </em> </h1>
+        <!-- Link to GIS Project -->
+        <a href="html/gis.html"> GIS Project </a>
+        <!-- Link to OCR Project -->
+        <a href="html/ocr.html"> OCR Project </a>
+        <!-- Link to ArcGIS API -->
+        <a href="html/arc.html"> ArcGIS API </a>
+
+    </nav>
+
+    <!-- 
+    ============================================================================
+    ROCK TYPE SLIDESHOW
+    ============================================================================
+    -->
+
+    <div class="slideShow">
+
+        <!-- Igneous Rocks Section -->
+        <div class="rockTypeContainers fade" id="igneous">
+            <!-- Background image -->
+            <img class="rockTypeImages" src="images/chrisrocks/volcanoigneous.jpg"> 
+            <!-- Text -->
+            <div class="typeHeader">
+                <!-- Hidden text with brief description of rock type -->
+                <a class="rockTypeExplination"> 
+                    Igneous rocks from during the cooling and solidification of melted rocks or magma/lava. Rocks melt at high temperatures and they cool to form a new rock through volcanic erruptions or as they gradually dissipate heat in the subsurface.
+                </a>
+            </div>
+        </div>
+
+        <!-- Sedimentary Rocks Section -->
+        <div class="rockTypeContainers fade" id="sedimentary">
+            <!-- Background image -->
+            <img class="rockTypeImages" src="images/chrisrocks/StratifiedCliffBeach.jpg">
+
+            <!-- Text -->
+            <div class="typeHeader">
+                <!-- Hidden text with brief description of rock type -->
+                <a class="rockTypeExplination"> 
+                    Sedimentary rocks are formed by recycling other rocks. This recycling process consists of weathering and erosion, transportation of weathering products, burial, and finally compaction under increasily elevated pressure and temperate to form a new recycled rock.  
+                </a>
+            </div>
+        </div>
+
+        <!-- Metamorphic Rocks Rocks Section -->
+        <div class="rockTypeContainers fade" id="metamorphic" > 
+            <!-- Background image -->
+            <img class="rockTypeImages" src="images/chrisrocks/mountainsmetamorphic.jpg">
+
+            <!-- Text -->
+            <div class="typeHeader">
+                <!-- Hidden text with brief description of rock type -->
+                <a class="rockTypeExplination"> 
+                    Metamorphic rocks are formed by changing the chemical composition of any rock by increasing the pressure and temperature but not melting it. To do this, a rock must be burried deep underground by geologic processes like mountain building.
+                </a>
+            </div>
+        </div>
+
+        <!-- Minerals/Ore Section -->
+        <div class="rockTypeContainers fade" id="minearls">
+            <!-- Background image -->
+            <img class="rockTypeImages" src="images/chrisrocks/MineralsMine.jpg">
+
+            <!-- Text -->
+            <div class="typeHeader">
+                <!-- Hidden text with brief description of rock type -->
+                <a class="rockTypeExplination"> 
+                    A rock is composed of many minerals. A mineral is composed of chemical elements in a stable state. Some of these elements are valuable to us, such as copper, gold, or iron. If a mineral has these valuable elemnts we say it is economic, and if the concentration of economic minerals is sufficent in one location, we may mine it. 
+                </a>
+            </div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Circles/Dots -->
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+
+    <!-- 
+    ============================================================================
+    WORK SLIDESHOW, CHRIS' ROCK COLLECTION HEADER
+    ============================================================================
+    -->
+
+    <!-- Setup flex container with header for Chris' Rock Collection & Slideshow -->
+    <div id="container">
+
+        <div class="header" id="myHeader">
+            <h1> Chris' Rock <em> Collection </em> </h1>
+            <p style="font-style: italic;"> 
+                Click the buttons to change grid view. <br>
+                Click an image for a description. <br>
+                Look to the right to see where I got them.
+            </p>
+            <button class="btn" onclick="one()">1</button>
+            <button class="btn" onclick="two()">2</button>
+            <button class="btn" onclick="four()">4</button>
+        </div> 
+
+        <div class="buffer"></div>
+
+        <!-- Figure out how to not change sizes of flex containers -->
+        <div id="autoSlideSlow">
+            <img class="slideShowImages" src="https://images.unsplash.com/photo-1676973439811-791ef1c9e250?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"> 
+            <img class="slideShowImages" src="https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"> 
+        </div>
+
+    </div>
+
+    <!-- 
+    ============================================================================
+    ROCK SAMPLE GRID
+    ============================================================================
+    -->
+
+    <div class="row">
+        <div class="column">
+
+            <div class="imgbox" id="sample-00" onclick="sampleText(0)">
+                <img class="gridImage" src="images/chrisrocks/collection/Bornite.JPG">
+                <p class="sampleText"> Name: Bornite <br> Type: Ore Mineral <br> Commodity: Copper <br> Collected: Utah <br> </p>
+            </div>
+
+            <div class="imgbox" id="sample-01" onclick="sampleText(1)">
+                <img class="gridImage" src="images/chrisrocks/collection/Malachite.JPG">
+                <p class="sampleText"> Name: Malachite <br> Type: Ore Mineral <br> Commodity: Copper <br> Collected: Newfoundland <br> </p>
+            </div>
+
+            <div class="imgbox" id="sample-02" onclick="sampleText(2)">
+                <img class="gridImage" src="images/chrisrocks/collection/WGHG.jpg">
+                <p class="sampleText"> Name: Granite (Gold-Bearing) <br> Type: Igneous <br> Minerals: Galena, Chalcopyrite <br> Collected: Southwest Newfoundland <br>  </p>
+            </div>
+
+        </div>
+        <div class="column">
+
+            <div class="imgbox" id="sample-03" onclick="sampleText(3)">
+                <img class="gridImage" src="images/chrisrocks/collection/CZ.JPG">
+                <p class="sampleText"> Name: Semi-Massive Sulphide (Gold-Bearing) <br> Type: Ore Mineral <br> Minerals: Pyrite, Chalcopyrite, Galena, Bornite <br> Collected: Southwest Newfoundland <br>  </p>
+            </div>
+
+            <div class="imgbox" id="sample-04" onclick="sampleText(4)">
+                <img class="gridImage" src="images/chrisrocks/collection/Obsidian.JPG">
+                <p class="sampleText"> Name: Obsidian <br> Type: Igneous <br> Minerals: Silicates <br> Collected: Utah <br> </p>
+            </div>
+
+            <div class="imgbox" id="sample-05" onclick="sampleText(5)">
+                <img class="gridImage" src="images/chrisrocks/collection/Apatite.JPG">
+                <p class="sampleText"> Name: Apatite <br> Type: Ore Mineral <br> Commodity: Phosphorus <br> Collected: Utah <br>  </p>
+            </div>
+
+        </div>
+        <div class="column">
+
+            <div class="imgbox" id="sample-06" onclick="sampleText(6)">
+                <img class="gridImage" src="images/chrisrocks/collection/Labradorite.JPG">
+                <p class="sampleText"> Name: Labradorite <br> Type: Igneous/Metamorphic <br> Minerals: Plagioclase Feldspar, Micas <br> Collected: Labrador <br>  </p>
+            </div>
+
+            <div class="imgbox" id="sample-07" onclick="sampleText(7)">
+                <img class="gridImage" src="images/chrisrocks/collection/Peroditite.JPG">
+                <p class="sampleText"> Name: Peroditite <br> Type: Igneous (Ocean Floor Rocks!) <br> Minerals: Olivene, Pyroxene, Plagioclase Feldspar <br> Collected: Western Newfoundland <br> </p>
+            </div>
+
+            <div class="imgbox" id="sample-08" onclick="sampleText(8)">
+                <img class="gridImage" src="images/chrisrocks/collection/Buchans.JPG">
+                <p class="sampleText"> Name: Massive Sulphide Ore (Drilled) <br> Type: Igneous <br> Commodities: Gold, Silver, Copper, Lead, Zinc <br> Collected: Buchans, Newfoundland <br>  </p>
+            </div>
+
+        </div>
+        <div class="column">
+
+            <div class="imgbox" id="sample-09" onclick="sampleText(9)">
+                <img class="gridImage" src="images/chrisrocks/collection/Wood.JPG">
+                <p class="sampleText"> Name: Petrified Wood <br> Type: Sedimentary <br> Minerals: Silicates <br> Collected: Newfoundland <br>  </p>
+            </div>
+
+            <div class="imgbox" id="sample-10" onclick="sampleText(10)">
+                <img class="gridImage" src="images/chrisrocks/collection/Fuchsite.JPG">
+                <p class="sampleText"> Name: Fuchsite <br> Type: Ore Mineral <br> Commodity: Chromium <br> Collected: Scandinavia <br> </p>
+            </div>
+
+            <div class="imgbox" id="sample-11" onclick="sampleText(11)">
+                <img class="gridImage" src="images/chrisrocks/collection/Bismuth.JPG">
+                <p class="sampleText"> Name: Bismuth (Native) <br> Type: Ore Mineral <br> Commodity: Bismuth <br> Collected: Utah <br> </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 
+    ============================================================================
+    Generic Footer Information
+    ============================================================================
+    -->
+
+    <footer>
+        <!-- Contact links -->
+
+        <a href="https://www.linkedin.com/in/cwilliamsgeo/" class="social"> 
+            <img src="images/misc/linkedin_icon2.png" width="64" height="64" alt="linkedin" > 
+        </a>
+
+        <a href="https://github.com/celw10" class="social"> 
+            <img src="images/misc/github.png" width="64" height="64" alt="github" > 
+        </a>
+
+        <a href="mailto:celw10@mun.ca" class="social"> 
+            <img src="images/misc/email_icon.png" width="64" height="64" alt="email" > 
+        </a>  
+
+    </footer>
+
+</body>

@@ -1,0 +1,270 @@
+/* ============================================================================
+/* Container Styling
+/* ============================================================================
+
+/* Font family for entire document */
+*{
+  font-family: sans-serif;
+}
+
+/* HTML Style */
+html {
+  width: 100vw;
+}
+
+/* Main body container */
+.main{
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Background image spanning page enxtent, placeholder for GIS API */
+.backgroundimg{
+  height: 100vh;
+  width: 100%;
+}
+
+/* Container div for all subsequent overlay elements, nav, aside, footer, main, ect.*/
+.overlay{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100vh;
+  width: 100%;
+}
+
+/* ============================================================================
+/* Nav Styling
+/* ============================================================================
+
+/* Navigation Parent */
+nav {
+  display: flex;
+  height: 32px;
+  width: 50%;
+  float: right;
+  background-color: #4b609a90; /*THEMING*/
+  align-items: center;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 1.1vw;
+}
+
+/* Search bar */
+nav input[type="search"] {
+  height: 24px;
+  flex: 4;
+  margin-left: 2%;
+  margin-right: 1%;
+  border: 0;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #16272B; /*THEMING*/
+  color: white;
+  cursor: text;
+}
+.searchbar:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.searchbar::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Search query toggle ODD STYLING IN SAFARI!*/
+nav select {
+  height: 24px;
+  flex: 2;
+  margin-left: 1%;
+  margin-right: 1%;
+  border: 0;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #16272B; /*THEMING*/
+  color:  white;
+  cursor: pointer;
+}
+.query:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Search button */
+nav button {
+  height: 24px;
+  flex: 1;
+  margin-left: 1%;
+  margin-right: 1%;
+  border-radius: 5px;
+  border: 0;
+  text-align: center;
+  background-color: #16272B; /*THEMING*/
+  color: white;
+  cursor: pointer;
+}
+.searchbutton:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Drop down menu button */
+nav img {
+  height: 24px;
+  flex: 0.5;
+  border: 0;
+  margin-left: 1%;
+  margin-right: 2%;
+  cursor: pointer;
+}
+.dropaside:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* ============================================================================
+/* Main Styling
+/* ============================================================================
+
+/* Styling for main parent */
+main {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+/* ============================================================================
+/* Aside Styling
+/* ============================================================================
+
+/* Styling for aside */
+.menu {
+  font-size: 1.1vw;
+  position: absolute;
+  float: right;
+  right: -1000px;
+  margin: 5px;
+  background-color: #283B51; /*THEMING*/
+  width: 20%;
+  border-radius: 5px;
+  outline: black solid 2px;
+  transition: right 1s;
+}
+
+/* Close menu button */
+.menu img{
+  width: 24px;
+  float: right;
+  margin: 5px;
+  cursor: pointer;
+}
+.closeaside:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Styling for h2 */
+.menu h2 {
+  align-items: center;
+  font-size: 110%;
+  margin-left: 2%;
+  color: white;
+}
+
+/* Styling for h3 children */
+.menu h3 {
+  align-items: center;
+  font-size: 95%;
+  margin-left: 3%;
+  color: white;
+}
+
+/* Styling for lists */
+ul li {
+  margin-left: 4%;
+  padding: 2px;
+}
+
+/* no-bullets-list class applied to menu items */
+.no-bullets-list{
+  list-style-type: none;
+  padding: 2px;
+}
+.no-bullets-list li a{
+  text-decoration: none;
+  color: white;
+}
+
+/*============================================================================
+/* Footer search results
+/*============================================================================
+
+/* FOOTER */
+.searchResults{
+  font-size: 1.1vw;
+  position: absolute;
+  bottom: -1000px;
+  background-color: #283B51; /*THEMING*/
+  width: 98%;
+  margin: 1%;
+  max-height: 80%; 
+  border-radius: 5px;
+  outline: black solid 2px;
+  transition: bottom 1s;
+  overflow: auto;
+}
+
+/* Styling for exit button */
+.searchResults img{
+  width: 24px;
+  float: right;
+  margin: 5px;
+  cursor: pointer;
+}
+.closeFooter:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Styling for search results heading */
+.searchResults h3{
+  align-items: center;
+  margin-left: 1%;
+  color: white
+}
+
+/*============================================================================
+/* Search Results Table 
+/*============================================================================
+
+/* Styling for search results table */
+.tabularResults{
+  width: 98%;
+  margin: 1%;
+  border-collapse: collapse;
+}
+
+/* Styling for rows and columns of results table */
+.tabularResults {
+  text-align: left;
+  color: white;
+}
+
+/* Cell styling */
+.tabularResults td, th {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+/* Row shading */ 
+.tabularResults tr:nth-child(odd){
+  background-color: #1B2D32; /*THEMING*/
+}
+.tabularResults tr:first-child {
+  background-color: #16272B; /*THEMING*/
+}
+
+/* Hide for displaying search results */
+.hide{
+  display: none;
+}

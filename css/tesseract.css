@@ -1,0 +1,74 @@
+/* ============================================================================
+/* Container Styling
+/* ============================================================================
+  
+/* Font family for entire document */
+*{
+    font-family: sans-serif;
+}
+
+/* HTML Style */
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+  }
+
+/* ============================================================================
+/* Body Styling
+/* ============================================================================
+
+/* Nav Header */
+nav {
+    display: flex;
+    align-items: center;
+    margin: 2%;
+}
+nav h1 {
+    color: white;
+    font-size: 24px;
+}
+nav h1 a {
+    color: white;
+    text-decoration: none;
+    font-style: italic;
+}
+
+/* Container for File Selection */
+#container {
+    width: 50%;
+    align-items: center;
+    padding: 1%;
+    margin: auto;
+    color: white;
+    outline: 2px solid red;
+    border-radius: 5px;
+}
+
+/* Processing Examples */
+.row{
+    margin: 0% 1% 1% 1%;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+}
+.column{
+    flex: 48%;
+    margin: 0% 1% 1% 1%;
+    outline: 2px solid red;
+    border-radius: 5px;
+}
+
+/* Output OCR on original Image */
+#log {
+    width: 80%;
+    align-items: center;
+    margin: auto;
+    padding: 1%;
+    color: white;
+    outline: 2px solid red;
+    border-radius: 5px;
+    margin-bottom: 1%;
+}

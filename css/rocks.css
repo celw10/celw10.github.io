@@ -1,0 +1,365 @@
+/* ============================================================================
+/* Styling for Chirs' Rocks Sub-Page
+/* ============================================================================
+
+/* Styling for entire document */
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    cursor: none;
+}
+
+/* ============================================================================
+/* Container Styling
+/* ============================================================================
+
+/* HTML Style */
+html {
+    width: 100vw;
+}
+
+/* Sub-page body container */
+.chrisRocks{
+    width: 100vw;
+    margin: 0;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+/*============================================================================
+/* Nav Styling
+/*============================================================================
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    align-items: center;
+    margin: 1em;
+}
+nav h1{
+    flex: 6;
+    color: white;
+    font-size: 24px;
+}
+
+nav a{
+    flex: 1;
+    color: white;
+    text-decoration: none;
+    font-style: none;
+    transition: transform 1s ease-in-out;
+}
+
+nav a:hover {
+    transform: scale(1.1);
+}
+
+/*============================================================================
+/* Cover Slideshow
+/*============================================================================
+
+/* Slideshow */
+.slideShow{
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    margin: auto;
+}
+.rockTypeContainers{
+    display: none;
+    overflow: hidden;
+}
+.prev, .next{
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+.dots{
+    position: absolute;
+    width: 100vw;
+    bottom: 10px;
+    text-align: center;
+}
+.dot{
+    height: 22px;
+    width: 22px;
+    margin: 5px 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: #717171;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+  
+  /* Images */
+.rockTypeImages{
+    object-fit: cover;
+    margin: auto;
+    display: block;
+    max-height: 90vh;
+    min-width: 100vw;
+    transition: transform 2s ease-in-out;
+    animation-name: textAppear;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+.rockTypeImages:hover{
+    transform: scale(1.1)
+}
+  
+  /* Text */
+.typeHeader{
+    position: absolute;
+    top: 0;
+    width: 98vw;
+    padding: 1vw;
+    text-align: center;
+}
+.rockTypeExplination{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 125%;
+    text-shadow: 0 0 100px white;
+    transition: opacity 2s ease-in-out;
+    opacity: 0;
+}
+.rockTypeContainers:hover .rockTypeExplination{
+    opacity: 1;
+}
+
+/*============================================================================
+/* Rock Collection Header/Slideshow
+/*============================================================================
+
+/* Container */
+#container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+}
+
+/* Rock collection header & button container */
+.header {
+    flex: 0 0 35vw;
+    text-align: center;
+    color: white;
+    margin: 1%;
+    font-size: 80%;
+}
+/* Button Styling */
+.btn {
+    margin: 2px 2px;
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #ddd;
+    font-size: 18px;
+    font-style: bold;
+    transition: background-color 0.6s ease;
+}
+.btn:hover {
+    background-color: #bbb;
+}
+.btn.active {
+    background-color: #717171;
+    color: white;
+}
+
+/* Buffer to fix the auto-sizing problem I had with my flexboxes */
+.buffer{
+    flex: 1;
+    flex-shrink: 1;
+}
+
+/* Slideshow container */
+#autoSlideShow{
+    flex: 1;
+    width: 50vw;
+    height: 30vh;
+}
+.slideShowImages {
+    max-width: 50vw;
+    max-height: 50vh;
+    margin-right: 2vw;
+}
+
+/*============================================================================
+/* Image Grids
+/*============================================================================
+
+/* Grid & Image Styling */
+.row{
+    display: flex;
+    flex-wrap: wrap;
+} 
+.column{
+    flex: 50%;
+}
+.column img{
+    vertical-align: middle;
+}
+
+.gridImage{
+    width: 100%;
+    transition: transform 1s ease-in-out;
+}
+.gridImage:hover{
+    transform: scale(1.25);
+}
+
+.imgbox{
+    position: relative;
+    margin: 4px 2px 4px 2px;
+    overflow: hidden;
+}
+
+/* Sample text */
+.sampleText {
+    position: absolute;
+    top: 0;
+    margin: 5px;
+    text-align: left;
+    font-style: italic;
+    font-size: 125%;
+    color: black;
+    text-shadow: 1px 1px 10px white;
+    opacity: 0;
+    animation-name: textAppear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+
+/*============================================================================
+/* Footer
+/*============================================================================
+
+/* Footer with contact info */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+}
+.social {
+    text-decoration: none;
+    padding-left: 1em;
+    padding-right: 1em;
+    transition: transform 1s ease-in-out;
+}
+.social:hover{
+    transform: scale(1.1)
+}
+
+/*============================================================================
+/* Cursor
+/*============================================================================
+
+/* Cursor styling for entire  page */
+#cursorTrace {
+    z-index: 1; /* Set below my images for some reason? */
+    width: 36px;
+    height: 36px;
+    border: 1px solid white;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    transition: transform 300ms linear;
+    pointer-events: none;
+  }
+
+/* Popup text for image hover */
+#cursorText{
+    font-size: 24px;
+    position: absolute;
+    top: -18px; /* better way to position? */
+    left: 40px;
+    white-space: nowrap;
+    color: white;
+    font-style: bold;
+    text-shadow: 1px 1px 10px black;
+    opacity: 1;
+    animation-name: textAppear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+@keyframes textAppear { /* also use this for rockTypeExplination */
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+@keyframes revertTextAppear {
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+
+/* Inner circle sizing animation for image hover */
+#innerCircle{
+    position: relative;
+    top: 14px;
+    left: 14px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: white;
+    animation-name: scale;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+@keyframes scale {
+    from {
+        top: 14px;
+        left: 14px;
+        width: 6px;
+        height: 6px;
+    }
+    to {
+        top: 5px;
+        left: 5px;
+        width: 24px;
+        height: 24px;
+    }
+}
+@keyframes revertScale {
+    from {
+        top: 5px;
+        left: 5px;
+        width: 24px;
+        height: 24px;
+    }
+    to {
+        top: 14px;
+        left: 14px;
+        width: 6px;
+        height: 6px;
+    }
+}
