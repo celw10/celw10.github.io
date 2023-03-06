@@ -1,15 +1,13 @@
-Chris' Rocks
+Thank you for checking out my HTML, CSS, and Javascript project for GetCoding!
 
-Chris' rocks is my HTML, CSS and Javascript project to showcase some rock samples from my personal collection. I've collected there rocks in many different locations from Goose Bay, Labrador, to a shop outside of Zion National Park in Utah, U.S.A. With this project, I want to showcase my background but also create an interactive visually appealing page. 
+My original intention was to build the framework to solve a problem I enocuntered at my current job. There are thousands of historic mineral assessment reports from Newfoundland and labrador which have been scanned to PDF format and are non-searchable. Digitizing data from these reports is slow and expensive, so I wanted to explore different ways to extract and present digitized data in these reports. 
 
-GIS Project
+Solving this problem is difficult. Discussing it with my coach, we decided that other modules in the GetCoding program may be more suited towards some of the funcitonality I want to build here. 
 
-Ultimately I want to have a GIS based project displaying historic mineral exploration data for users to download. My GIS Project was an initial construction of my vision of this app. What I have built in this preliminary vision has some cool search functionality from a example JSON mining data. 
+What I came up with are three sub-projects which each investigate different aspects of the app I eventually want to build. The GIS Project was my original vision of the app, and it includes some cool search functionality of real historic assessment data. The Optical Charachter Recognition project (OCR Project) was a brief investigation into the Tesseract API. OCR will be core to what I want to do in the future. Finally, I wanted to investigate a GIS API which would provide the main UI/UX expirence as users select and download digitized historic data. I used the ArcGIS API incorporating some real mineral claims and mineral showings data in Newfoundland and Labrador. Please note that all the data I display here was downloaded January 2nd, 2023, and is thus only accurate to that date. 
 
-OCR Project
+My main HTML, CSS, and Javascript showcase project is Chris' Rocks. This project was built to showcase some rock samples from my personal collection. I've collected there rocks in many different locations from Goose Bay, Labrador, to a shop outside of Zion National Park in Utah, U.S.A. With this project, I want to highlight background but also create an interactive visually appealing page. 
 
-I will need some OCR funcitnality in my final app as the historic mineral explration data is within scanned (non-searchable) PDFs. This OCR project was intended to test out a popular OCR API called Tesseract. Tesseract extracts texts from images, and some sample images are provided for test usage. Any png or jpg formatted image is current accepted by this app. 
+![IntroPage](https://user-images.githubusercontent.com/34209214/223201101-8cfcdbdd-8d80-472d-8fa7-d9958e674df3.png)
 
-ArcGIS API
-
-I am testing the ArcGIS API here. The ArcGIS API is a web-based GIS applcaiton where I can upload and plot data on a user-interacive 2D map. I have current mineral exploraiton claims and all recorded mineral showings in Newfoundalnd and Labrador uploaded for users to interact with. The ultimate vision of the app I want to build will require a GIS API. Please note that the claims and mineral showing data are accurate to Janurary 2nd, 2023. 
+Navigation for Chris' Rocks is shown above. If you hover over the rock type images, you'll see a brief description of what each rock type is, in addition to a popup of the rock type following your cursor. There are four in total, Igneous, Sedimentary, Metamorphic, and Economic (the kind of rocks you make money from!). Scrolling down, you'll see a short slideshow of a few images related to how I collected these rocks. To the left are four buttons which change the layout of the 12 rock samples form my collection I've picked to display. If you hover over the rock sample its name will follow your cursor, and if you click on the images additional information about that rock sample will appear. 
