@@ -31,12 +31,23 @@ HEAD
 <body>
 
     <nav>
-        <h1> Optical Charachter Recognition (OCR) Example with <a href="https://tesseract.projectnaptha.com/"> Tesseract </a> </h1>
+        <h1> Optical Charachter Recognition (OCR) Example with <a href="https://tesseract.projectnaptha.com/" target="_blank" rel="noopener noreferrer"> Tesseract </a> </h1>
     </nav>
+
+    <h2 style="color: white; margin-left: 2%;">
+         Instructions 
+    </h2>
+
+    <ol style="color: white; margin: 2%;"> 
+        <li> Upload an image file containing text in one of the supported languages (english, spanish, french). </li>
+        <li> Five example images, three in english and one in both spanish and french, may be downloaded  <a href="https://github.com/celw10/celw10.github.io/tree/main/ocr_examples" target="_blank" rel="noopener noreferrer"> here </a>. </li>
+        <li> Typical OCR image processing workflow outputs are in the next two rows. Please note that no pre-processing is done prior to OCR, this is simply to test the APIs image processing capabilities. </li>
+        <li> Your OCR output for the uploaded image is on the bottom row. </li>
+    </ol>
 
     <div id='container'>
         <p style="margin: 5px;">
-            Upload one of the provided test images for Tesseract API. 
+            Upload an image file containing text and select a language. 
         </p>
 
         <!-- File Upload -->
@@ -45,6 +56,8 @@ HEAD
         <!-- Select Language -->
         <select id='langsel'>
             <option value='eng' selected> English </option>
+            <option value='fra'> French </option>
+            <option value='spa'> Spanish </option>
         </select>
     </div>
 
@@ -78,7 +91,7 @@ HEAD
 
     <!-- Progress Update -->
     <div id="log" style="color: white;">
-        <p style="margin: 5px;"> Upload image through <em> Browse... </em> for OCR output </p>
+        <p style="margin: 5px;"> Tesseract will run in the selected language once an image is uploaded... </p>
     </div>
 
 </body>
