@@ -16,9 +16,9 @@ Navigation for Chris' Rocks is shown above. If you hover over the rock type imag
 
 Clicking on the first of the three sub-projects, GIS Project, you will see a page identical to the above image. Toward the top right of the page you will see four elements. A search bar, drop-down search tool, and search button. To search through a database, type in a particular historic mining company, for example "Noranda". Ensure the "companies" is selected from the drop down list, then click search. A footer element will appear with the results of your search query. Clickin on the menu icon in the uppermost right corner of the app will open a hidden menu to the right. Clicking on these options will load different background images representitive of different types of historic minearl exploraiton data. 
 
-Image of OCR PROJECT!
+<img width="1259" alt="image" src="https://user-images.githubusercontent.com/34209214/223279537-042260c0-7233-4645-9db8-49b6abe427b4.png">
 
-Clicking on the second of the three sub-projects, OCR Project, you will see an image identical to the above. Here, you may upload image only data in a language supported by the drop down optsions adjacent to the browse button. This image should have some text for the Tesseract OCR algorithm to recognize. Four versions of your uploaded image will pop up in addition to the regnized text. These four popups represent typical processing steps duirng OCR, but are not implemented here, and only for show. 
+Clicking on the second of the three sub-projects, OCR Project, you will see an image identical to the above. Here, you may upload only image data in either English, Spanish or French. This image should have some text for the Tesseract OCR algorithm to recognize. Four versions of your uploaded image will pop up in addition to the regnized text. These four popups represent typical processing steps duirng OCR, but are not implemented here, and only for show. There are five example images to use in this github repo under the directory labeled ocr_examples under images.
 
 ![image](https://user-images.githubusercontent.com/34209214/223206044-2e950705-db32-4b3d-b1f5-166a460893fc.png)
 
