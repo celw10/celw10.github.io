@@ -268,3 +268,26 @@ ul li {
 .hide{
   display: none;
 }
+
+/* Table widths */
+#tableCompany{
+  width: 22%;
+}
+#tableLicense{
+  width: 14%;
+}
+#tableLocation{
+  width: 12%;
+}
+#tableStatus{
+  width: 12%;
+}
+#tableActive{
+  width: 12%;
+}
+#tableUnactive{
+  width: 12%;
+}
+#tableExpenditures{
+  width: 12%;
+}
